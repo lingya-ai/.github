@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Lingya · 灵芽</h1>
+<h1 align="center">Lingya · 灵涯</h1>
 
 <p align="center">
   让 AI Agent 进入真实业务，也让它始终可治理。<br>
@@ -19,7 +19,7 @@
 
 ## 让智能体可靠地工作
 
-灵芽专注于让企业安全地构建、治理与交付 AI Agent。我们的产品「小灵通」通过 Studio 管理智能体的知识、工具、发布与边界，并通过 Portal 帮助员工完成有依据、可确认的真实工作。
+灵涯专注于让企业安全地构建、治理与交付 AI Agent。我们的产品「小灵通」通过 Studio 管理智能体的知识、工具、发布与边界，并通过 Portal 帮助员工完成有依据、可确认的真实工作。
 
 我们在这里开放 Lingya Agents 的 API 契约、多语言服务端 SDK，以及从生产实践中沉淀的 Agent 与 MCP 基础设施。
 
