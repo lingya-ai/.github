@@ -7,43 +7,44 @@
 <h1 align="center">Lingya · 灵涯</h1>
 
 <p align="center">
-  让 AI Agent 进入真实业务，也让它始终可治理。<br>
-  AI agents for real work—built to stay governed.
+  <strong>让每个想法，都能低成本变成 AI 产品</strong><br>
+  Turn every idea into an AI product—at low cost.
 </p>
 
 <p align="center">
   <a href="https://www.lingya.tech/">官网</a> ·
-  <a href="#开源项目">开源项目</a><br>
-  <a href="https://www.lingya.tech/">Website</a> ·
-  <a href="#open-source">Open source</a>
+  <a href="https://lingya-ai.github.io/xlt-agent-ui/">UI 文档与演示</a> ·
+  <a href="https://lingya-ai.github.io/lingya-agents-openapi/">API 文档</a>
 </p>
 
-## 让智能体可靠地工作
+灵涯致力于降低 AI 产品的开发与接入成本。我们将产品「小灵通」实践中的接口契约、多语言 SDK、React 交互组件、Agent 运行时与 MCP 网关逐步开放，让开发者复用已有能力，更快地把想法做成可用的产品。
 
-### Governable agents for real work
+从接入智能体、搭建交互界面，到扩展工具与运行时，你可以根据项目需要选择合适的起点。
 
-灵涯专注于让企业安全地构建、治理与交付 AI Agent。我们的产品「小灵通」通过 Studio 管理智能体的知识、工具、发布与边界，并通过 Portal 帮助员工完成有依据、可确认的真实工作。<br>
-Lingya helps enterprises build, govern, and deliver AI agents safely. Our product, Xiaolingtong, uses Studio to govern agent knowledge, tools, releases, and boundaries, while Portal helps employees complete evidence-backed, reviewable work.
+## 从你的目标开始
 
-我们在这里开放 Lingya Agents 的 API 契约、多语言服务端 SDK，以及从生产实践中沉淀的 Agent 与 MCP 基础设施。<br>
-On GitHub, we publish the Lingya Agents API contract, strongly typed server-side SDKs, and agent infrastructure shaped by production experience.
-
-### 开源项目
-
-#### Open source
-
-| 项目<br>Project | 用途<br>What it provides |
+| 你想做什么 | 推荐入口 |
 | --- | --- |
-| [Lingya Agents OpenAPI](https://github.com/lingya-ai/lingya-agents-openapi) | 46 个公开 HMAC API 的规范来源，包含 OpenAPI 3.1 契约、示例和确定性测试向量。<br>The source of truth for 46 public HMAC APIs, with an OpenAPI 3.1 contract, examples, and deterministic test vectors. |
-| [Kotlin/JVM SDK](https://github.com/lingya-ai/lingya-agents-sdk-kotlin) | 面向 JVM 17 服务端的强类型 SDK，支持协程与 SSE `Flow`。<br>A strongly typed JVM 17 SDK with coroutines and SSE `Flow`. |
-| [TypeScript SDK](https://github.com/lingya-ai/lingya-agents-sdk-typescript) | 面向 Node.js 服务端的强类型 SDK，内置请求签名与 SSE 事件流。<br>A strongly typed Node.js SDK with request signing and SSE event streams. |
-| [Python SDK](https://github.com/lingya-ai/lingya-agents-sdk-python) | 基于 Pydantic 模型的服务端 SDK，内置请求签名与 SSE 解码。<br>A server-side SDK with Pydantic models, request signing, and SSE decoding. |
-| [Rust SDK](https://github.com/lingya-ai/lingya-agents-sdk-rust) | 异步、强类型的服务端 SDK，覆盖公开契约并支持 SSE 流。<br>An async, strongly typed server-side SDK covering the public contract and SSE streams. |
-| [lingya-agent](https://github.com/lingya-ai/lingya-agent) | 与框架解耦的 Kotlin Agent 运行时，包含 ReAct、工具、Skill、MCP、工作区与多模型 Provider。<br>A framework-agnostic Kotlin agent runtime with ReAct, tools, skills, MCP, workspaces, and multiple model providers. |
-| [MCP Gateway](https://github.com/lingya-ai/mcp-gateway) | 原生 MCP 传输网关，在 stdio、SSE、Streamable HTTP 与 WebSocket 之间进行桥接。<br>A native transport gateway bridging MCP over stdio, SSE, Streamable HTTP, and WebSocket. |
+| 构建 Agent 对话界面 | [XLT Agent UI](https://github.com/lingya-ai/xlt-agent-ui)：通过 shadcn Registry 安装可自行维护的 React 组件源码，组合会话、消息、审批、工作区和文件预览等交互 |
+| 在业务系统中调用 Agent | 多语言 SDK：[TypeScript](https://github.com/lingya-ai/lingya-agents-sdk-typescript) · [Python](https://github.com/lingya-ai/lingya-agents-sdk-python) · [Kotlin/JVM](https://github.com/lingya-ai/lingya-agents-sdk-kotlin) · [Rust](https://github.com/lingya-ai/lingya-agents-sdk-rust) |
+| 查阅接口或自行实现客户端 | [Lingya Agents OpenAPI](https://github.com/lingya-ai/lingya-agents-openapi)：统一接口契约、认证规则、请求示例与流式事件说明 |
+| 构建或扩展 Kotlin Agent 运行时 | [lingya-agent](https://github.com/lingya-ai/lingya-agent)：包含 ReAct、工具调用、Skill、MCP、工作区与模型 Provider，当前处于抽离阶段 |
+| 连接不同传输方式的 MCP 服务 | [MCP Gateway](https://github.com/lingya-ai/mcp-gateway)：连接 stdio、SSE 与 Streamable HTTP，并支持 WebSocket 输出 |
 
-> **安全提示：** Lingya Agents SDK 仅适用于可信服务端。请勿在浏览器、桌面端或移动端分发 Access Secret，也不要把凭证提交到 Issue、日志或代码仓库。<br>
-> **Security:** Lingya Agents SDKs are for trusted servers only. Never distribute an Access Secret in a browser, desktop, or mobile client, and never include credentials in issues, logs, or source control.
+## 开始接入
 
-欢迎在对应仓库提交 Issue 或 Pull Request。各项目的成熟度、安装方式与许可证以其仓库文档为准。<br>
-Issues and pull requests are welcome in the relevant repository. See each repository for its current maturity, installation instructions, and license.
+- **构建界面：** 查看 [UI 文档与交互演示](https://lingya-ai.github.io/xlt-agent-ui/)
+- **接入接口：** 查看 [API 文档](https://lingya-ai.github.io/lingya-agents-openapi/)，选择适合你的 SDK
+- **了解产品：** 访问 [灵涯官网](https://www.lingya.tech/)
+
+浏览器接入使用由可信服务端签发的一次性令牌；Access Secret 仅保存在可信服务端。平台接入条件、项目成熟度、安装方式与许可证请参阅各仓库文档。
+
+欢迎通过对应仓库的 Issue 和 Pull Request 反馈问题、讨论改进并参与贡献。
+
+## About Lingya
+
+Lingya lowers the cost of building and integrating AI products. We open-source API contracts, multilingual SDKs, React UI components, an Agent runtime, and an MCP gateway shaped by our product, Xiaolingtong, so developers can reuse existing capabilities and turn ideas into working products faster.
+
+Start with [XLT Agent UI](https://github.com/lingya-ai/xlt-agent-ui) to build an interface, explore the [API reference](https://lingya-ai.github.io/lingya-agents-openapi/) and SDKs to integrate agents, or extend the [Kotlin runtime](https://github.com/lingya-ai/lingya-agent) and [MCP Gateway](https://github.com/lingya-ai/mcp-gateway) for your infrastructure. The Kotlin runtime is currently being extracted into a standalone project.
+
+Browser integrations use single-use tokens issued by a trusted server. Keep Access Secrets on trusted servers only. See each repository for access requirements, maturity, installation instructions, and license. Issues and pull requests are welcome.
