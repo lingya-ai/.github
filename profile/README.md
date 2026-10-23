@@ -28,7 +28,7 @@
 | 构建 Agent 对话界面 | [XLT Agent UI](https://github.com/lingya-ai/xlt-agent-ui)：通过 shadcn Registry 安装可自行维护的 React 组件源码，组合会话、消息、审批、工作区和文件预览等交互 |
 | 在业务系统中调用 Agent | 多语言 SDK：[TypeScript](https://github.com/lingya-ai/lingya-agents-sdk-typescript) · [Python](https://github.com/lingya-ai/lingya-agents-sdk-python) · [Kotlin/JVM](https://github.com/lingya-ai/lingya-agents-sdk-kotlin) · [Rust](https://github.com/lingya-ai/lingya-agents-sdk-rust) |
 | 查阅接口或自行实现客户端 | [Lingya Agents OpenAPI](https://github.com/lingya-ai/lingya-agents-openapi)：统一接口契约、认证规则、请求示例与流式事件说明 |
-| 构建或扩展 Kotlin Agent 运行时 | [lingya-agent](https://github.com/lingya-ai/lingya-agent)：包含 ReAct、工具调用、Skill、MCP、工作区与模型 Provider，当前处于抽离阶段 |
+| 构建或扩展 Kotlin Agent 运行时 | [lingya-agent](https://github.com/lingya-ai/lingya-agent)：正在从产品实现中逐步剥离出开源核心，涵盖 ReAct、工具调用、Skill、MCP、工作区与模型 Provider |
 | 连接不同传输方式的 MCP 服务 | [MCP Gateway](https://github.com/lingya-ai/mcp-gateway)：连接 stdio、SSE 与 Streamable HTTP，并支持 WebSocket 输出 |
 
 ## 开始接入
@@ -45,6 +45,6 @@
 
 Lingya lowers the cost of building and integrating AI products. We open-source API contracts, multilingual SDKs, React UI components, an Agent runtime, and an MCP gateway shaped by our product, Xiaolingtong, so developers can reuse existing capabilities and turn ideas into working products faster.
 
-Start with [XLT Agent UI](https://github.com/lingya-ai/xlt-agent-ui) to build an interface, explore the [API reference](https://lingya-ai.github.io/lingya-agents-openapi/) and SDKs to integrate agents, or extend the [Kotlin runtime](https://github.com/lingya-ai/lingya-agent) and [MCP Gateway](https://github.com/lingya-ai/mcp-gateway) for your infrastructure. The Kotlin runtime is currently being extracted into a standalone project.
+Start with [XLT Agent UI](https://github.com/lingya-ai/xlt-agent-ui) to build an interface, explore the [API reference](https://lingya-ai.github.io/lingya-agents-openapi/) and SDKs to integrate agents, or extend the [Kotlin runtime](https://github.com/lingya-ai/lingya-agent) and [MCP Gateway](https://github.com/lingya-ai/mcp-gateway) for your infrastructure. The Kotlin Agent runtime is being progressively extracted from the product implementation into an open-source core.
 
 Browser integrations use single-use tokens issued by a trusted server. Keep Access Secrets on trusted servers only. See each repository for access requirements, maturity, installation instructions, and license. Issues and pull requests are welcome.
